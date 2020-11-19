@@ -4,5 +4,5 @@ const express = require('express')
 const router = express.Router()
 
 router.post('/submit', valueController.submitValues)
-router.get('/:form/:field', valueController.getValuesByFormAndField)
+router.get('/:form', valueController.getValuesByFormAndField)
 module.exports = router

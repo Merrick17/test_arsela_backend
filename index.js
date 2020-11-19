@@ -2,7 +2,7 @@ const express = require('express')
 const bodyparser = require('body-parser')
 const mongoose = require('mongoose')
 const formRoutes = require('./routes/form.routes')
-const valuesRoutes = require('./routes/values.routes')
+
 require('dotenv').config()
 var cors = require('cors')
 const app = express()
@@ -25,7 +25,7 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: false }))
 // déclaration des routes
 app.use('/form', formRoutes)
-app.use('/values', valuesRoutes)
+
 
 const port = process.env.PORT || 3500
 
